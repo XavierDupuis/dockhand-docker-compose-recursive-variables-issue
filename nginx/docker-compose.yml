@@ -1,0 +1,8 @@
+services:
+  nginx:
+    image: nginx:1.28.3
+    container_name: nginx
+    restart: always
+    labels:
+      config.domain: `nginx.${DOMAIN_NAME}`
+      config.wildcard: "${WILDCARD}"
