@@ -3,7 +3,6 @@ services:
     image: nginx:1.28.3
     container_name: nginx
     restart: always
-      - ${LOCATION:?Missing variable LOCATION}:/usr/src/app
     labels:
       - mylabels.directory=${DIRECTORY:?Missing variable DIRECTORY}
       - mylabels.location=${LOCATION:?Missing variable LOCATION}
